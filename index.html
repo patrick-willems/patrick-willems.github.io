@@ -3,49 +3,132 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
+body {font-family: Verdana;}
 
-.topnav {
+/* Style the tab */
+.tab {
   overflow: hidden;
-  background-color: #333;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  align-items: center;
 }
 
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: middle;
+  border: none;
+  outline: none;
+  cursor: pointer;
   padding: 14px 16px;
-  text-decoration: none;
+  transition: 0.3s;
   font-size: 17px;
+  text-align: center;
 }
 
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: rgb(225, 212, 212);
 }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
 }
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* For image */
+img.rounded {
+  object-fit: cover;
+  border-radius: 80%;
+  height: 200px;
+  width: 200px;
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
 </style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<title>Patrick Willems - Postdoctoral researcher</title>
 </head>
-<body>
+<body bgcolor="#f1f1f1">
 
-<div class="topnav">
-  <a class="active" href="#home">Patrick Willems</a>
-  <a href="#news">Academic service</a>
-  <a href="#contact">Publications</a>
-  <a href="#about">Contact</a>
+<div class="tab">
+  <button class="tablinks" onclick="openTab(event, 'Patrick Willems')" id="defaultOpen">Patrick Willems</button>
+  <button class="tablinks" onclick="openTab(event, 'Publications')">Publications</button>
+  <button class="tablinks" onclick="openTab(event, 'Academic service')">Academic service</button>
+  <button class="tablinks" onclick="openTab(event, 'CV')">CV</button>
 </div>
 
-<div style="padding-left:16px">
-  <h2>Top Navigation Example</h2>
-  <p>Some content..</p>
+<div id="Patrick Willems" class="tabcontent" style='margin-left:100px;margin-right:100px;'>
+    <table style="width:100%">
+        <tr style="width:100%">
+            <th style="width:15%" valign="top" align="left" style="text-align: justify;">
+                <img src="DSC_1646.JPG" class="rounded"><p>
+                <font face = "San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif" size = "4"><b>Patrick Willems</b></font><p>
+                <font face = "San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif" size = "2" style="font-weight:normal;"><i>Post-doctoral researcher at Ghent University. Passionate about discovery biology using (multi-)OMICS datasets.</i><p>
+                <font face = "San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif" size = "2"><i class="fa fa-map-marker" aria-hidden="true"></i> Ghent, Belgium<br>
+                <span>&#9993;</span> <a href="mailto:willems533@gmail.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><font color="black">willems533@gmail.com</a><br>
+                <i class="fa">&#xf099;</i> <a href="https://twitter.com/Patrick14342109" style="text-decoration: none;" target="_blank" rel="noopener noreferrer"><font color="black">Patrick14342109</a><br>
+                <img src="orcid.svg" height="14" width="14"> <a href="https://orcid.org/0000-0003-4667-2294" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><font color="black">0000-0003-4667-2294</a><br>
+                <img src="icons8-google-scholar-48.png" height="16" width="16"> <a href="https://scholar.google.com/citations?user=yh0bSnMAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" style="text-decoration: none;"><font color="black">Google scholar</a>
+            </th>
+            <th style="width:75%" valign="top">
+                <p><font face = "San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif" size = "4"><b>Research experience</font><p>
+                <font face = "San Francisco,Roboto,Segoe UI,Helvetica Neue,Lucida Grande,Arial,sans-serif" size = "2" style="font-weight:normal;">I obtained my master degree at Ghent University after plant studying cold stress signaling in plants during six months in the Vaughan Hurry lab in Umeå (Sweden). Afterwards, I continued studying plant abiotic stress signaling during my PhD in the Oxidative Stress Signaling group of Frank Van Breusegem in collaboration with the proteomics group of Kris Gevaert. My PhD work mostly entailed integrative –OMICS analysis of transcriptomic and proteomic datasets. As a post-doctoral researcher, I was active in the field of microbiology by annotating novel proteins in <i>Salmonella enterica</i> and infection biology. Afterwards, I re-oriented to study post-translational modifications (PTMs) in plants, with recent published work including experimental study of S-sulfenylation, AlphaFold2-based identification of disulfides and the development of an integrative plant PTM database ‘The Plant PTM Viewer’.</font>
+            </th>
+        </tr>
+    </table>
 </div>
 
+<div id="Publications" class="tabcontent" style='margin-left:50px;margin-right:50px;'>
+  <h3>Publications</h3>
+  <p>Paris is the capital of France.</p> 
+</div>
+
+<div id="Academic service" class="tabcontent" style='margin-left:50px;margin-right:50px;'>
+  <h3>Academic service</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="CV" class="tabcontent" style='margin-left:50px;margin-right:50px;'>
+    <h3><i>Curriculum vitae</i></h3>
+    <p>Tokyo is the capital of Japan.</p>
+  </div>
+
+<script>
+function openTab(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+   
 </body>
-</html>
+</html> 
